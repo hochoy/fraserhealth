@@ -6,7 +6,7 @@
         "Name": "Vancouver General Hospital",
         "Type": "Hospital",
         "n_naloxone": "5",
-        "Timestamp": "2016-05-10T11:30:20+00:00",
+        "Timestamp": "2016-05-10T11:30:20+00:00"
       },
       "geometry": {
         "coordinates": [
@@ -23,7 +23,7 @@
         "Name": "St Pauls",
         "Type": "Hospital",
         "n_naloxone": "5",
-        "Timestamp": "2016-05-10T11:30:20+00:00",
+        "Timestamp": "2016-05-10T11:30:20+00:00"
       },
       "geometry": {
         "coordinates": [
@@ -40,7 +40,7 @@
         "Name": "CFRI",
         "Type": "Hospital",
         "n_naloxone": "5",
-        "Timestamp": "2016-05-10T11:30:20+00:00",
+        "Timestamp": "2016-05-10T11:30:20+00:00"
       },
       "geometry": {
         "coordinates": [

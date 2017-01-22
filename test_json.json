@@ -3,15 +3,13 @@
     {
       "type": "Feature",
       "properties": {
-        "Name": "Vancouver General Hospital",
-        "Type": "Hospital",
-        "n_naloxone": "5",
-        "Timestamp": "2016-05-10T11:30:20+00:00"
+        "Name": "Overdose 1",
+        "Type": "overdose"
       },
       "geometry": {
         "coordinates": [
-          -123.125113,
-          49.281083
+          -123.099531,
+          49.282202
         ],
         "type": "Point"
       },
@@ -20,15 +18,28 @@
     {
       "type": "Feature",
       "properties": {
-        "Name": "St Pauls",
-        "Type": "Hospital",
-        "n_naloxone": "5",
-        "Timestamp": "2016-05-10T11:30:20+00:00"
+        "Name": "Responder 1",
+        "Type": "responder"
       },
       "geometry": {
         "coordinates": [
-          -123.125113,
-          49.281083
+          -123.099531,
+          49.282202
+        ],
+        "type": "Point"
+      },
+      "id": "1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Responder 2",
+        "Type": "responder"
+      },
+      "geometry": {
+        "coordinates": [
+          -123.097505,
+          49.281299
         ],
         "type": "Point"
       },
@@ -37,15 +48,13 @@
     {
       "type": "Feature",
       "properties": {
-        "Name": "CFRI",
-        "Type": "Hospital",
-        "n_naloxone": "5",
-        "Timestamp": "2016-05-10T11:30:20+00:00"
+        "Name": "Responder 3",
+        "Type": "responder"
       },
       "geometry": {
         "coordinates": [
-          -123.125113,
-          49.281083
+          -123.100541,
+          49.280410
         ],
         "type": "Point"
       },

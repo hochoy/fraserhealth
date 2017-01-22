@@ -3,7 +3,10 @@
     {
       "type": "Feature",
       "properties": {
-        "BusinessType": "Computer Services",
+        "Name": "Vancouver General Hospital",
+        "Type": "Hospital",
+        "n_naloxone": "5",
+        "Timestamp": "2016-05-10T11:30:20+00:00",
       },
       "geometry": {
         "coordinates": [
@@ -12,49 +15,41 @@
         ],
         "type": "Point"
       },
-      "id": "011a47c14be8e6a78a299731d10cbc69"
+      "id": "1"
     },
     {
       "type": "Feature",
       "properties": {
-        "BusinessType": "Computer Services"
+        "Name": "St Pauls",
+        "Type": "Hospital",
+        "n_naloxone": "5",
+        "Timestamp": "2016-05-10T11:30:20+00:00",
       },
       "geometry": {
         "coordinates": [
-          -123.116514,
-          49.280628
+          -123.125113,
+          49.281083
         ],
         "type": "Point"
       },
-      "id": "014f3379ede87c6469025a1d73c99e82"
+      "id": "2"
     },
     {
       "type": "Feature",
       "properties": {
-        "BusinessType": "Computer Services"
+        "Name": "CFRI",
+        "Type": "Hospital",
+        "n_naloxone": "5",
+        "Timestamp": "2016-05-10T11:30:20+00:00",
       },
       "geometry": {
         "coordinates": [
-          -123.043427,
-          49.207323
+          -123.125113,
+          49.281083
         ],
         "type": "Point"
       },
-      "id": "017a06a726b0ccac2ec5baf36a86eba6"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "BusinessType": "Computer Services",
-      },
-      "geometry": {
-        "coordinates": [
-          -123.116105,
-          49.277806
-        ],
-        "type": "Point"
-      },
-      "id": "020959a2b6db61e517e8a461dc052978"
+      "id": "3"
     }
   ],
   "type": "FeatureCollection"

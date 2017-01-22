@@ -1,0 +1,61 @@
+﻿{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "BusinessType": "Computer Services",
+      },
+      "geometry": {
+        "coordinates": [
+          -123.125113,
+          49.281083
+        ],
+        "type": "Point"
+      },
+      "id": "011a47c14be8e6a78a299731d10cbc69"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "BusinessType": "Computer Services"
+      },
+      "geometry": {
+        "coordinates": [
+          -123.116514,
+          49.280628
+        ],
+        "type": "Point"
+      },
+      "id": "014f3379ede87c6469025a1d73c99e82"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "BusinessType": "Computer Services"
+      },
+      "geometry": {
+        "coordinates": [
+          -123.043427,
+          49.207323
+        ],
+        "type": "Point"
+      },
+      "id": "017a06a726b0ccac2ec5baf36a86eba6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "BusinessType": "Computer Services",
+      },
+      "geometry": {
+        "coordinates": [
+          -123.116105,
+          49.277806
+        ],
+        "type": "Point"
+      },
+      "id": "020959a2b6db61e517e8a461dc052978"
+    }
+  ],
+  "type": "FeatureCollection"
+}

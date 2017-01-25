@@ -131,67 +131,67 @@
                 map.getSource("people")
             }, 2000);
 
-            // map.addLayer({
-            //     "id": "responders_pulse",
-            //     "type": "circle",
-            //     "source": "people",
-            //     "paint": {
-            //         "circle-radius": initialRadius,
-            //         "circle-color": "green",
-            //         "circle-radius-transition": {
-            //             duration: 0
-            //         },
-            //         "circle-opacity-transition": {
-            //             duration: 0
-            //         }
-            //     }
-            //     // ,
-            //     // filter: ['in', 'Type', 'responder']
-            // });
-            //
-            // map.addLayer({
-            //     "id": "responders_static",
-            //     "source": "people",
-            //     "type": "circle",
-            //     "paint": {
-            //         // "circle-radius": initialRadius,
-            //         "circle-color": "green",
-            //         "circle-radius": initialRadius,
-            //         // "circle-color": "green",
-            //         "circle-opacity": 0.8
-            //     }
-            //     // ,
-            //     // filter: ['in', 'Type', 'responder']
-            // });
+            map.addLayer({
+                "id": "responders_pulse",
+                "type": "circle",
+                "source": "people",
+                "paint": {
+                    "circle-radius": initialRadius,
+                    "circle-color": "green",
+                    "circle-radius-transition": {
+                        duration: 0
+                    },
+                    "circle-opacity-transition": {
+                        duration: 0
+                    }
+                }
+                // ,
+                // filter: ['in', 'Type', 'responder']
+            });
 
-            // map.addLayer({
-            //     "id": "overdosers_pulse",
-            //     "type": "circle",
-            //     "source": "people",
-            //     "paint": {
-            //         "circle-radius": initialRadius,
-            //         "circle-radius-transition": {
-            //             duration: 0
-            //         },
-            //         "circle-opacity-transition": {
-            //             duration: 0
-            //         },
-            //         "circle-color": "red"
-            //     },
-            //     filter: ['in', 'Type', 'overdose']
-            // });
-            //
-            // map.addLayer({
-            //     "id": "overdosers_static",
-            //     "source": "people",
-            //     "type": "circle",
-            //     "paint": {
-            //         "circle-radius": initialRadius,
-            //         "circle-color": "red",
-            //         "circle-opacity": 0.8
-            //     },
-            //     filter: ['in', 'Type', 'overdose']
-            // });
+            map.addLayer({
+                "id": "responders_static",
+                "source": "people",
+                "type": "circle",
+                "paint": {
+                    // "circle-radius": initialRadius,
+                    "circle-color": "green",
+                    "circle-radius": initialRadius,
+                    // "circle-color": "green",
+                    "circle-opacity": 0.8
+                }
+                // ,
+                // filter: ['in', 'Type', 'responder']
+            });
+
+            map.addLayer({
+                "id": "overdosers_pulse",
+                "type": "circle",
+                "source": "people",
+                "paint": {
+                    "circle-radius": initialRadius,
+                    "circle-radius-transition": {
+                        duration: 0
+                    },
+                    "circle-opacity-transition": {
+                        duration: 0
+                    },
+                    "circle-color": "red"
+                },
+                filter: ['in', 'Type', 'overdose']
+            });
+
+            map.addLayer({
+                "id": "overdosers_static",
+                "source": "people",
+                "type": "circle",
+                "paint": {
+                    "circle-radius": initialRadius,
+                    "circle-color": "red",
+                    "circle-opacity": 0.8
+                },
+                filter: ['in', 'Type', 'overdose']
+            });
 
             function animateMarker(timestamp) {
                 setTimeout(function() {
@@ -201,17 +201,17 @@
                     opacity -= (0.8 / framesPerSecond);
 
 
-                    // map.setPaintProperty('overdosers_pulse', 'circle-radius', radius);
-                    // map.setPaintProperty('overdosers_pulse', 'circle-opacity', opacity);
-                    // map.setPaintProperty('responders_pulse', 'circle-radius', radius);
-                    // map.setPaintProperty('responders_pulse', 'circle-opacity', opacity);
+                    map.setPaintProperty('overdosers_pulse', 'circle-radius', radius);
+                    map.setPaintProperty('overdosers_pulse', 'circle-opacity', opacity);
+                    map.setPaintProperty('responders_pulse', 'circle-radius', radius);
+                    map.setPaintProperty('responders_pulse', 'circle-opacity', opacity);
 
-                    if (opacity <= 0) {
+                    if (opacity <= 0.1) {
                         radius = initialRadius;
                         opacity = initialOpacity;
                     }
 
-                }, 1000 / framesPerSecond);
+                }, 1500 / framesPerSecond);
 
             }
 
@@ -219,82 +219,92 @@
             animateMarker(0);
 
 
-            // // movement
-            // var origin = [-123.099779, 49.281320];
-            // var destination = [-123.099531, 49.282202];
-            //
-            // // A simple line from origin to destination.
-            // var route = {
-            //     "type": "FeatureCollection",
-            //     "features": [{
-            //         "type": "Feature",
-            //         "geometry": {
-            //             "type": "LineString",
-            //             "coordinates": [
-            //                 origin,
-            //                 destination
-            //             ]
-            //         }
-            //     }]
-            // }
-            //
-            // // A single point that animates along the route.
-            // // Coordinates are initially set to origin.
-            // var point = {
-            //     "type": "FeatureCollection",
-            //     "features": [{
-            //         "type": "Feature",
-            //         "geometry": {
-            //             "type": "Point",
-            //             "coordinates": origin
-            //         }
-            //     }]
-            // }
-            //
-            // // Calculate the distance in kilometers between route start/end point
-            // var lineDistance = turf.lineDistance(route.features[0], 'kilometers');
-            //
-            // map.addSource('route', {
-            //     "type": "geojson",
-            //     "data": route
-            // });
-            //
-            // map.addSource('point', {
-            //     "type": "geojson",
-            //     "data": point
-            // });
-            //
-            // map.addLayer({
-            //     "id": "route",
-            //     "source": "route",
-            //     "type": "line",
-            //     "paint": {
-            //         "line-width": 2,
-            //         "line-color": "#007cbf"
-            //     }
-            // });
-            //
-            //
-            // var counter = 0;
-            //
-            // function animate() {
-            //     counter = counter + 1;
-            //
-            //     // Update point geometry to a new position based on the animation
-            //     // And the distance the point has travelled along the route.
-            //     var updatedPoint = turf.along(route.features[0], counter / 1000 * lineDistance, 'kilometers');
-            //     point.features = [updatedPoint];
-            //
-            //     // Update the source with this new data.
-            //     map.getSource('ppl_geojson').setData(point);
-            //
-            //     // Request the next frame of the animation so long as destination.
-            //     // has not been reached.
-            //     if (point.features[0].geometry.coordinates[0] !== destination[0]) {
-            //         requestAnimationFrame(animate);
-            //     }
-            // }
-            // animate(counter);
+            // movement
+            var origin = [-123.099531, 49.282202];
+            var destination = [-123.099779, 49.281320];
+
+
+            // A simple line from origin to destination.
+            var route = {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "LineString",
+                        "coordinates": [
+                            origin,
+                            destination
+                        ]
+                    }
+                }]
+            }
+
+            // A single point that animates along the route.
+            // Coordinates are initially set to origin.
+            var point = {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": origin
+                    }
+                }]
+            }
+
+            // Calculate the distance in kilometers between route start/end point
+            var lineDistance = turf.lineDistance(route.features[0], 'kilometers');
+
+            map.addSource('route', {
+                "type": "geojson",
+                "data": route
+            });
+
+            map.addSource('point', {
+                "type": "geojson",
+                "data": point
+            });
+
+            map.addLayer({
+                "id": "route",
+                "source": "route",
+                "type": "line",
+                "paint": {
+                    "line-width": 2,
+                    "line-color": "#007cbf"
+                }
+            });
+
+            map.addLayer({
+                    "id": "point",
+                    "source": "point",
+                    "type": "symbol",
+                    "layout": {
+                        "icon-image": "airport-15",
+                        "icon-rotate": 140
+                    }
+                });
+
+            var counter = 0;
+
+            function animate() {
+                counter = counter + 1;
+
+                // Update point geometry to a new position based on the animation
+                // And the distance the point has travelled along the route.
+                var updatedPoint = turf.along(route.features[0], counter / 1000 * lineDistance, 'kilometers');
+                point.features = [updatedPoint];
+
+                // Update the source with this new data.
+                map.getSource('point').setData(point);
+
+                // Request the next frame of the animation so long as destination.
+                // has not been reached.
+                if (point.features[0].geometry.coordinates[0] !== destination[0]) {
+                    requestAnimationFrame(animate);
+                }
+            }
+            animate(counter);
         });
     </script>
 </body>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Main map</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.css" type="text/css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="loader_style.css" />
+    <link rel="stylesheet" href="mapbox.css" />
+    <link rel="stylesheet" href="marker.css" />
+
+</head>
+
+<body>
+
+    <div id="appframe">
+        <!-- map goes here  -->
+        <div id="map">
+            <div id="loader" style="display: none"></div>
+        </div>
+        <!-- right sidebar goes here -->
+        <div id="sidebar">
+          <div>
+            <p id="display_token" type="text" name="display_token">Step 1: Enter mapbox access token</p>
+            <input value="pk.eyJ1IjoiaG9jaG95IiwiYSI6ImNpdjc5d3NkZTAwMGEydG8yNHhqZ3B3bGEifQ.dpS_6YxfS-z5qTzbR13Gjw" type="text" name="input_token" onfocus="this.select();" onmouseup="return false;" onkeypress="searchKeyPress(event);" onkeyup="formChanged()" onchange="formChanged()" placeholder="Enter mapbox access token here" />
+            <button onclick="attemptloadmapbox()" type="submit">Step 2: Load the standard map</button>
+          </div>
+
+          <div>
+            <button id="fly">Fly</button>
+          </div>
+
+          <div>
+             <a href="mapbox_format.json" download>Step 3: Download sample geojson file</a>
+            <input type="file" id="selectFiles" value="Import" /><br />
+            <button id="import">Step 4: Load geojson file to show local businesses</button>
+          </div>
+
+        </div>
+        <br style="clear:both;" />
+
+    </div>
+
+
+    <!-- mapbox and functionality scripts -->
+    <script src="mapbox_animate.js"></script>
+    <script src="mapbox_forms.js"></script>
+    <script src="check_token.js"></script>
+    <script src="mapbox_loadmap.js"></script>
+    <script src="load_json.js"></script>
+
+
+</body>
+
+
+
+</html>

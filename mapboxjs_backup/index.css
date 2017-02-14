@@ -1,0 +1,41 @@
+body {
+  color: #404040;
+  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+  margin: 0;
+  /*width: 94%;*/
+  /*height:1000px;*/
+  width: auto;
+  height:90vh;
+  padding: 20px;
+  border: 3px solid green;
+  -webkit-font-smoothing: antialiased;
+
+}
+
+#appframe {
+  margin: auto;
+  width:95%;
+  height: 90%;
+  padding:20px;
+  border: 3px solid red;
+}
+
+#map {
+  float:left;
+  width:70%;
+  height:95%;
+  border: 3px solid gold;
+  padding: 1%;
+}
+#sidebar{
+  float:right;
+  width:22%;
+  height:95%;
+  border: 3px solid gold;
+  padding: 1%;
+}
+
+#display_token{
+    width:99%;
+    word-wrap: break-word;
+}

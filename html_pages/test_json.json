@@ -1,0 +1,60 @@
+{
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "Name": "Overdose 1",
+            "Type": "overdose",
+            "order": 1
+        },
+        "geometry": {
+            "coordinates": [-123.099779,
+                49.281320
+            ],
+            "type": "Point"
+        },
+        "id": "1"
+    }, {
+        "type": "Feature",
+        "properties": {
+            "Name": "Responder 1",
+            "Type": "responder",
+            "order": 1
+        },
+        "geometry": {
+            "coordinates": [-123.099531,
+                49.282202
+            ],
+            "type": "Point"
+        },
+        "id": "2"
+    }, {
+        "type": "Feature",
+        "properties": {
+            "Name": "Responder 2",
+            "Type": "responder",
+            "order": 1
+        },
+        "geometry": {
+            "coordinates": [-123.097505,
+                49.281299
+            ],
+            "type": "Point"
+        },
+        "id": "3"
+    }, {
+        "type": "Feature",
+        "properties": {
+            "Name": "Responder 3",
+            "Type": "responder",
+            "order": 1
+        },
+        "geometry": {
+            "coordinates": [-123.100541,
+                49.280410
+            ],
+            "type": "Point"
+        },
+        "id": "4"
+    }],
+    "type": "FeatureCollection"
+};

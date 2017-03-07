@@ -30,7 +30,17 @@
     <div id="map"></div>
 
      <!-- load data -->
-    <script src="od_load.js"></script>
+    <!-- <script src="od_load.js"></script> -->
+    <script>
+    var ppl_geojson;
+    var od_dataurl = "https://raw.githubusercontent.com/hochoy/fraserhealth/master/html_pages/od.json?token=AL-4nLcmq_hMpLm5ZKnB7reB3vJ-7ruoks5YxzfvwA%3D%3D"
+
+    $.getJSON(od_dataurl, function(json_out) {
+      ppl_geojson = json_out;
+    })
+
+    </script>
+
 
     <script>
         mapboxgl.accessToken = "pk.eyJ1IjoiaG9jaG95IiwiYSI6ImNpdjc5d3NkZTAwMGEydG8yNHhqZ3B3bGEifQ.dpS_6YxfS-z5qTzbR13Gjw";
